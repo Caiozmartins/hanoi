@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include <stdio.h> //Bibliotecas utilizadas
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-typedef struct Disco {
+typedef struct Disco {//Representa um disco da torre
     int tamanho;
     struct Disco *proximo;
 } Disco;
