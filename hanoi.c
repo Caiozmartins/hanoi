@@ -226,7 +226,7 @@ void jogarManual(Torre *A, Torre *B, Torre *C, int discos, char *nome) {
             d = d->proximo;
         }
         if (count == discos) {
-            printf("Parabéns %s! Você venceu em %d movimentos.\n", nome, movimentos);
+            printf("Parabens %s! Voce venceu em %d movimentos.\n", nome, movimentos);
             adicionarHistorico(nome, movimentos, discos);
             break;
         }
@@ -246,17 +246,17 @@ int main() {
 
     while (1) {
         printf("\nMenu:\n");
-        printf("1. Jogar Torre de Hanói (movimentação manual)\n");
+        printf("1. Jogar Torre de Hanoi (movimentação manual)\n");
         printf("2. Reiniciar jogo\n");
-        printf("3. Ver histórico das partidas\n");
+        printf("3. Ver historico das partidas\n");
         printf("4. Buscar por jogador/data\n");
         printf("5. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
 
         int opcao;
         if (scanf("%d", &opcao) != 1) {
             while(getchar() != '\n'); // limpar buffer
-            printf("Opção inválida.\n");
+            printf("Opcao invalida.\n");
             continue;
         }
         while(getchar() != '\n'); // limpar buffer
@@ -270,7 +270,7 @@ int main() {
                     printf("Nome inválido.\n");
                     break;
                 }
-                printf("Digite o número de discos (3 a 10): ");
+                printf("Digite o numero de discos (3 a 10): ");
                 if (scanf("%d", &discos) != 1 || discos < 3 || discos > 10) {
                     while(getchar() != '\n');
                     printf("Número inválido de discos.\n");
@@ -309,7 +309,7 @@ int main() {
                 while (C.topo) desempilhar(&C);
                 return 0;
             default:
-                printf("Opção inválida.\n");
+                printf("Opcao invalida.\n");
         }
     }
     return 0;
