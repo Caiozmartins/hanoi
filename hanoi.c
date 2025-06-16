@@ -195,7 +195,7 @@ void jogarManual(Torre *A, Torre *B, Torre *C, int discos, char *nome) {
         int res = scanf(" %c %c", &origem, &destino);
         while(getchar() != '\n'); // limpar buffer
         if (res != 2) {
-            printf("Entrada inválida.\n");
+            printf("Entrada invalida.\n");
             continue;
         }
         if ((origem == '0' && destino == '0')) {
@@ -205,11 +205,11 @@ void jogarManual(Torre *A, Torre *B, Torre *C, int discos, char *nome) {
         Torre *torreOrigem = pegarTorrePorId(A, B, C, origem);
         Torre *torreDestino = pegarTorrePorId(A, B, C, destino);
         if (!torreOrigem || !torreDestino) {
-            printf("Torres inválidas. Use A, B ou C.\n");
+            printf("Torres invalidas. Use A, B ou C.\n");
             continue;
         }
         if (!movimentoValido(torreOrigem, torreDestino)) {
-            printf("Movimento inválido: não é permitido colocar disco maior sobre menor ou torre origem vazia.\n");
+            printf("Movimento invalido: nao e permitido colocar disco maior sobre menor ou torre origem vazia.\n");
             continue;
         } else {
             int disco = desempilhar(torreOrigem);
@@ -218,7 +218,7 @@ void jogarManual(Torre *A, Torre *B, Torre *C, int discos, char *nome) {
         movimentos++;
         mostrarTodasTorres(A, B, C);
 
-        // Verificar vitória: todos discos em torre C
+        // Verificar vitoria: todos discos em torre C
         int count = 0;
         Disco *d = C->topo;
         while (d) {
@@ -256,7 +256,7 @@ int main() {
         int opcao;
         if (scanf("%d", &opcao) != 1) {
             while(getchar() != '\n'); // limpar buffer
-            printf("Opcao invalida.\n");
+            printf("Opcao indisponivel.\n");
             continue;
         }
         while(getchar() != '\n'); // limpar buffer
@@ -267,13 +267,13 @@ int main() {
                 fgets(nome, sizeof(nome), stdin);
                 nome[strcspn(nome, "\n")] = 0; // remover \n
                 if (strlen(nome) == 0) {
-                    printf("Nome inválido.\n");
+                    printf("Nome invalido.\n");
                     break;
                 }
-                printf("Digite o numero de discos (3 a 10): ");
+                printf("Coloque a quantidade de Discos (3 a 10): ");
                 if (scanf("%d", &discos) != 1 || discos < 3 || discos > 10) {
                     while(getchar() != '\n');
-                    printf("Número inválido de discos.\n");
+                    printf("Numero invalido de discos.\n");
                     break;
                 }
                 while(getchar() != '\n');
@@ -309,7 +309,7 @@ int main() {
                 while (C.topo) desempilhar(&C);
                 return 0;
             default:
-                printf("Opcao invalida.\n");
+                printf("Opcao indisponivel.\n");
         }
     }
     return 0;
