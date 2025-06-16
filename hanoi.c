@@ -155,7 +155,7 @@ void mostrarHistoricos() {
 
 void buscarHistorico() {
     char busca[50];
-    printf("Digite nome do jogador ou data para buscar: ");
+    printf("Digite nome do jogador ou data para buscar: ");//busca historico do jogo
     fgets(busca, sizeof(busca), stdin);
     busca[strcspn(busca, "\n")] = 0; // remove \n
 
@@ -245,7 +245,7 @@ int main() {
     int jogoAtivo = 0;
 
     while (1) {
-        printf("\nMenu:\n");
+        printf("\nMenu:\n");//Menu do game
         printf("1. Jogar Torre de Hanoi (movimentação manual)\n");
         printf("2. Reiniciar jogo\n");
         printf("3. Ver historico das partidas\n");
