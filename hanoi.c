@@ -142,11 +142,11 @@ void adicionarHistorico(char *nome, int movimentos, int discos) {
 
 void mostrarHistoricos() {
     if (listaHistorico == NULL) {
-        printf("Nenhum histórico disponível.\n");
+        printf("Nenhum historico disponível.\n");
         return;
     }
     Historico *atual = listaHistorico;
-    printf("Histórico de partidas:\n");
+    printf("Historico de partidas:\n");
     while (atual) {
         printf("Jogador: %s | Movimentos: %d | Discos: %d | Data: %s\n", atual->nome, atual->movimentos, atual->discos, atual->dataHora);
         atual = atual->proximo;
@@ -155,7 +155,7 @@ void mostrarHistoricos() {
 
 void buscarHistorico() {
     char busca[50];
-    printf("Digite nome do jogador ou data para buscar: ");//busca historico do jogo
+    printf("Digite o nome do jogador ou data para buscar: ");//busca historico do jogo
     fgets(busca, sizeof(busca), stdin);
     busca[strcspn(busca, "\n")] = 0; // remove \n
 
@@ -248,10 +248,10 @@ int main() {
         printf("\nMenu:\n");//Menu do game
         printf("1. Jogar Torre de Hanoi (movimentacao manual)\n");
         printf("2. Reiniciar jogo\n");
-        printf("3. Ver historico das partidas\n");
+        printf("3. Visualizar historico das partidas\n");
         printf("4. Buscar por jogador/data\n");
         printf("5. Sair\n");
-        printf("Escolha uma opcao: ");
+        printf("Escolha uma das opcoes: ");
 
         int opcao;
         if (scanf("%d", &opcao) != 1) {
