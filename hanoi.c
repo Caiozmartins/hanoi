@@ -246,7 +246,7 @@ int main() {
 
     while (1) {
         printf("\nMenu:\n");//Menu do game
-        printf("1. Jogar Torre de Hanoi (movimentação manual)\n");
+        printf("1. Jogar Torre de Hanoi (movimentacao manual)\n");
         printf("2. Reiniciar jogo\n");
         printf("3. Ver historico das partidas\n");
         printf("4. Buscar por jogador/data\n");
