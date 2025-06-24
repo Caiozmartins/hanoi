@@ -54,5 +54,5 @@ Dicas para vencer com 5 discos:
 29. B → A  
 30. B → C  
 31. A → C
-
+if ($?) { gcc hanoi.c -o Hanoi }; if ($?) { \.hanoi }
 
